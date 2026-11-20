@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tsuriboon.com/sitemap.xml
