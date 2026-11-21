@@ -21,7 +21,6 @@ article/bc26.html
 article/bellowsstick28.html
 article/bigbacker107.html
 article/bitv26.html
-article/blooowin167f-shallow.html
 article/blooowin80s.html
 article/blueblue-chinning.html
 article/boostersystem.html
@@ -124,7 +123,6 @@ article/moura105s.html
 article/nabarone150f.html
 article/naoryrange.html
 article/narage50.html
-article/narage65.html
 article/negakarikeigenjh.html
 article/nezakanachinuebi.html
 article/numberseven117f.html
