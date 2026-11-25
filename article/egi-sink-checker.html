@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>【エギ沈下速度計算】水深ごとのフォール時間を簡単計算｜エギングツール｜tsuri-boon</title>
+  <meta name="description" content="ヤマシタ・DUEL・DAIWA・SHIMANO・DUO・ジャッカル・林釣漁具など9メーカーのエギの沈下速度を号数・タイプ別に確認できるツール。狙うレンジに合ったエギ選びに。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="こすけ">
+  <meta name="application-name" content="tsuri-boon">
+  <link rel="canonical" href="https://tsuriboon.com/article/egi-sink-checker.html">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/image/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
+
+  <meta property="og:title" content="エギ沈下速度チェッカー｜シリーズ・号数で瞬時に確認｜tsuri-boon">
+  <meta property="og:description" content="ヤマシタ・DUEL・DAIWA・SHIMANO・DUO・ジャッカル・林釣漁具など9メーカーのエギの沈下速度を号数・タイプ別に確認できるツール。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="tsuri-boon">
+  <meta property="og:url" content="https://tsuriboon.com/article/egi-sink-checker.html">
+  <meta property="og:image" content="https://tsuriboon.com/image/egi-sink-checker.jpg">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="エギ沈下速度チェッカー｜シリーズ・号数で瞬時に確認｜tsuri-boon">
+  <meta name="twitter:description" content="ヤマシタ・DUEL・DAIWA・SHIMANO・DUO・ジャッカル・林釣漁具など9メーカーのエギの沈下速度を号数・タイプ別に確認できるツール。">
+  <meta name="twitter:image" content="https://tsuriboon.com/image/egi-sink-checker.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tsuriboon.com/article/egi-sink-checker.html" },
+    "headline": "エギ沈下速度チェッカー｜シリーズ・号数で瞬時に確認",
+    "description": "ヤマシタ・DUEL・DAIWA・SHIMANO・DUO・ジャッカル・林釣漁具など9メーカーのエギの沈下速度を号数・タイプ別に確認できるツール。",
+    "image": ["https://tsuriboon.com/image/egi-sink-checker.jpg"],
+    "author": {"@type": "Person", "name": "こすけ", "url": "https://tsuriboon.com/tsuri-boon.html"},
+    "publisher": { "@type": "Organization", "name": "tsuri-boon", "logo": { "@type": "ImageObject", "url": "https://tsuriboon.com/image/tsuriboon_favicon.png" } },
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "articleSection": "エギング",
+    "keywords": ["エギ","沈下速度","エギ王K","エギ王LIVE","エギ王SEARCH","ヤマシタ","DUEL","DAIWA","SHIMANO","DUO","ジャッカル","餌木猿","エギング"]
+  }
+  </script>
+
+  <!-- 既存の共通CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- チェッカー専用CSS（後から読み込むことで競合時に優先される） -->
+  <link rel="stylesheet" href="../css/egi-sink-checker.css">
+  <!-- パンくず構造化データ start -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://tsuriboon.com/"},
+      {"@type": "ListItem", "position": 2, "name": "便利ツール", "item": "https://tsuriboon.com/#tools"},
+      {"@type": "ListItem", "position": 3, "name": "エギ沈下速度計算ツール", "item": "https://tsuriboon.com/article/egi-sink-checker.html"}
+    ]
+  }
+  </script>
+  <!-- パンくず構造化データ end -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YGK5NJLT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J1YGK5NJLT');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9034047517729390"
+       crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+  <a href="../index.html" class="logo">
+    <img src="../image/tsuriboon_logo_header.png" alt="tsuri-boon ロゴ" width="128" height="64">
+  </a>
+</header>
+
+<div class="sub-nav">
+  <nav class="sub-nav-inner">
+    <a href="../lure-zukan.html">ルアー図鑑</a>
+    <a href="../rod-zukan.html">ロッド図鑑</a>
+    <a href="../lure-gatya.html">ルアーガチャ</a>
+    <a href="../maker-zukan.html">メーカー図鑑</a>
+    <a href="../index.html#tools">便利ツール</a>
+  </nav>
+</div>
+
+<main class="article-main">
+  <!-- パンくず start --><nav class="breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../index.html">トップ</a></li><li><a href="../index.html#tools">便利ツール</a></li><li aria-current="page">エギ沈下速度計算ツール</li></ol></nav><!-- パンくず end -->
+  <!-- 更新日 start --><div class="article-meta"><div class="pr-note">※当サイトはアフィリエイト広告を利用しています</div><p class="article-date">更新日：2026年4月6日</p></div><!-- 更新日 end -->
+
+  <article class="lure-article">
+
+    <!-- ヒーローバナー -->
+    <div class="egi-hero">
+      <div class="egi-hero-eyebrow">Eging Tool</div>
+      <h1>エギ沈下速度計算ツール</h1>
+      <p class="egi-hero-sub">フォール時間シミュレーター<br>号数・タイプを選ぶだけで<br>沈下速度・重さ・到達時間をすぐ確認</p>
+      <div class="egi-hero-deco">🦑</div>
+    </div>
+
+    <details id="toc">
+      <summary>目次</summary>
+      <ul>
+        <li><a href="#checker">沈下速度チェッカー</a></li>
+        <li><a href="#guide">沈下速度の目安</a></li>
+        <li><a href="#howto">タイプの選び方</a></li>
+      </ul>
+    </details>
+
+    <h2 id="checker">沈下速度チェッカー</h2>
+
+    <div class="checker-card">
+      <div class="checker-card-header">
+        <span class="checker-card-icon">🎣</span>
+        <span class="checker-card-title">SINK SPEED CHECKER</span>
+      </div>
+      <div class="checker-card-body">
+        <div class="checker-selectors">
+          <div class="checker-sel-group">
+            <span class="checker-sel-label">メーカー</span>
+            <select id="sel-maker"></select>
+          </div>
+          <div class="checker-sel-group">
+            <span class="checker-sel-label">シリーズ</span>
+            <select id="sel-series" disabled></select>
+          </div>
+          <div class="checker-sel-group">
+            <span class="checker-sel-label">号数</span>
+            <select id="sel-size" disabled></select>
+          </div>
+          <div class="checker-sel-group">
+            <span class="checker-sel-label">タイプ</span>
+            <select id="sel-type" disabled></select>
+          </div>
+        </div>
+        <div id="checker-result"></div>
+      </div>
+    </div>
+
+    <h2>エギの沈下速度とは？</h2>
+      <p>
+      エギの沈下速度（フォールスピード）は、1m沈むのにかかる秒数で表されます。
+      例えば「3.0号で約3秒/m」の場合、10m沈めるには約30秒必要です。
+      </p>
+      
+      <h2>このツールの使い方</h2>
+      <ul>
+      <li>メーカー/エギシリーズを選択</li>
+      <li>号数を選択</li>
+      <li>沈下時間を自動計算</li>
+      </ul>
+      
+      <h2>よくある質問</h2>
+      <h3>エギは何秒沈めればいい？</h3>
+      <p>水深と潮流によりますが、基本は底取りできる時間まで沈めます。</p>
+          
+    <h2 id="guide">沈下速度の目安</h2>
+    <p>沈下速度（秒/m）は<strong>数値が小さいほど速く</strong>（深いレンジ向き）、<strong>大きいほど遅く</strong>（浅いレンジ向き）なります。</p>
+
+    <table class="sink-guide-table">
+      <thead>
+        <tr>
+          <th>タイプ目安</th>
+          <th>沈下速度</th>
+          <th>適した<wbr>シーン</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="type-pill deep">ディープ・<wbr>TR系</span></td>
+          <td>〜2秒/<wbr>m</td>
+          <td>水深が<wbr>深い・<wbr>潮流が<wbr>速い</td>
+        </tr>
+        <tr>
+          <td><span class="type-pill basic">ベーシック</span></td>
+          <td>3〜4秒/<wbr>m</td>
+          <td>オールラウンド・<wbr>標準的な<wbr>状況</td>
+        </tr>
+        <tr>
+          <td><span class="type-pill shallow">シャロー</span></td>
+          <td>4〜7秒/<wbr>m</td>
+          <td>シャローエリア・<wbr>潮止まり<wbr>付近</td>
+        </tr>
+        <tr>
+          <td><span class="type-pill super">スーパーシャロー</span></td>
+          <td>7秒/<wbr>m〜</td>
+          <td>根の<wbr>浅い<wbr>場所・<wbr>ナーバスな<wbr>イカ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="howto">タイプの選び方</h2>
+    <p>
+      基本はベーシックをメインに使い、根がかりが気になるシャローエリアではシャロー系にローテーションするのが定番です。
+      潮流が速い日や水深10m以上を狙う場合はディープ系・TR系が有効です。
+    </p>
+
+    <h3>ワンポイント</h3>
+    <div class="tip-box">
+      <strong>同じ号数でもシリーズによって沈下速度が異なります。</strong><br>
+      チェッカーでシリーズを切り替えながら比較してみると、当日の水深・潮流に合ったエギが見つかりやすいです。
+    </div>
+
+    <h2>こんな人におすすめ</h2>
+<ul>
+  <li>エギの沈下時間を知りたい人</li>
+  <li>底取りが苦手な初心者</li>
+  <li>根掛かりを減らしたい人</li>
+</ul>
+    
+  </article>
+
+  <h2 style="font-size:1rem;margin-top:2rem;">関連リンク</h2>
+  <ul>
+    <li><a href="https://www.yamashita.co.jp/" target="_blank" rel="noopener">ヤマシタ公式サイト</a></li>
+    <li><a href="https://www.duel.co.jp/" target="_blank" rel="noopener">DUEL公式サイト</a></li>
+    <li><a href="https://www.daiwa.com/jp/" target="_blank" rel="noopener">DAIWA公式サイト</a></li>
+    <li><a href="https://fish.shimano.com/" target="_blank" rel="noopener">SHIMANO公式サイト</a></li>
+    <li><a href="../lure-zukan.html">ほかのルアーを探す</a></li>
+  </ul>
+
+  <div>
+    <p>人気記事はこちら</p>
+    <div class="article-cards">
+      <a href="furusato-tsurigu.html" class="article-card">
+        <img src="../image/furusato-tsurigu.jpg" alt="ふるさと納税のおすすめ釣り具返礼品">
+        <h3>【2026年】ふるさと納税のおすすめ釣り具返礼品｜ジャンル別に紹介</h3>
+      </a>
+      <a href="2026-new-egi.html" class="article-card">
+        <img src="../image/2026-new-egi.jpg" alt="2026年新作エギまとめ">
+        <h3>2026年新作エギまとめ｜注目の9種をメーカー別に紹介</h3>
+      </a>
+      <a href="eging-begginer-item.html" class="article-card">
+        <img src="../image/eging-beginner-tackle.jpg" alt="エギング初心者におすすめの道具">
+        <h3>エギング初心者におすすめの道具5選</h3>
+      </a>
+      <a href="tungsten-price.html" class="article-card">
+        <img src="../image/tungsten-price.jpg" alt="タングステン高騰はいつまで？">
+        <h3>TGベイトもシンカーも値上げ…タングステン高騰はいつまで？</h3>
+      </a>
+    </div>
+  </div>
+
+  <!-- 新着記事 start -->
+  <div class="osusume shinchaku" id="shinchaku" hidden>
+    <p class="osusume-title">新着記事はこちら</p>
+    <div class="osusume-cards"></div>
+  </div>
+  <script src="../js/new-articles.js" defer></script>
+  <!-- 新着記事 end -->
+
+  <!-- オススメ記事 start -->
+  <div class="osusume">
+    <p class="osusume-title">オススメ記事はこちら</p>
+    <div class="osusume-cards">
+      <a href="egiohtr.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/egiohtr.jpg" alt="エギ王TR" loading="lazy"></span>
+        <span class="osusume-name">エギ王TR</span>
+        <span class="osusume-copy">ヤマシタのティップラン専用エギ</span>
+      </a>
+      <a href="squidjunkylivelydart.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/squidjunkylivelydart.png" alt="スクイッドジャンキー ライブリーダート" loading="lazy"></span>
+        <span class="osusume-name">スクイッドジャンキー ライブリーダート</span>
+        <span class="osusume-copy">ハヤブサのエギ</span>
+      </a>
+      <a href="naoryrange.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/naoryrange.jpg" alt="ナオリーレンジ" loading="lazy"></span>
+        <span class="osusume-name">ナオリーレンジ</span>
+        <span class="osusume-copy">ヤマシタのライトエギング用エギ</span>
+      </a>
+      <a href="egiohkdeep.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/egiohkdeep.jpg" alt="エギ王Kディープ" loading="lazy"></span>
+        <span class="osusume-name">エギ王Kディープ</span>
+        <span class="osusume-copy">ヤマシタの深場対応エギ</span>
+      </a>
+      <a href="armor.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/armor.jpg" alt="アーマー" loading="lazy"></span>
+        <span class="osusume-name">アーマー</span>
+        <span class="osusume-copy">ヤマシタのイカメタル用スッテ</span>
+      </a>
+      <a href="egiohsearch.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/egiohsearch.jpg" alt="エギ王SEARCH" loading="lazy"></span>
+        <span class="osusume-name">エギ王SEARCH</span>
+        <span class="osusume-copy">ヤマシタのエギ</span>
+      </a>
+      <a href="emeraldas-dartlc-neguard.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/emeraldas-dartlc-neguard.jpg" alt="エメラルダスダートLCネガード" loading="lazy"></span>
+        <span class="osusume-name">エメラルダスダートLCネガード</span>
+        <span class="osusume-copy">ダイワの根掛かり軽減エギ</span>
+      </a>
+      <a href="aorieq-oobunmaki.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/aorieq-oobunmaki.jpg" alt="アオリーキュー オオブンマキ" loading="lazy"></span>
+        <span class="osusume-name">アオリーキュー オオブンマキ</span>
+        <span class="osusume-copy">YO-ZURIの復刻エギ</span>
+      </a>
+      <a href="castrunner.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/castrunner.jpg" alt="キャストランナー" loading="lazy"></span>
+        <span class="osusume-name">キャストランナー</span>
+        <span class="osusume-copy">クレイジーオーシャンのシンカーハンガー付きエギ</span>
+      </a>
+      <a href="egiohk35traditional.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/egiohk35traditional.jpg" alt="エギ王K 3.5 トラディショナルエディション" loading="lazy"></span>
+        <span class="osusume-name">エギ王K 3.5 トラディショナルエディション</span>
+        <span class="osusume-copy">ヤマシタのエギ（エギ王25周年記念モデル）</span>
+      </a>
+      <a href="gekidaki-kaminari.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/gekidaki-kaminari.jpg" alt="ゲキダキカミナリ" loading="lazy"></span>
+        <span class="osusume-name">ゲキダキカミナリ</span>
+        <span class="osusume-copy">ジャッカルのエギ</span>
+      </a>
+      <a href="takoyurahunter.html" class="osusume-card">
+        <span class="osusume-thumb"><img src="../image/takoyurahunter.png" alt="タコゆらハンター" loading="lazy"></span>
+        <span class="osusume-name">タコゆらハンター</span>
+        <span class="osusume-copy">ヤマシタの岸釣り用タコエギ</span>
+      </a>
+    </div>
+  </div>
+  <!-- オススメ記事 end -->
+
+  <!-- 便利ツール start -->
+  <div>
+    <p>便利ツールはこちら</p>
+    <div class="article-cards">
+      <a href="../mukoindex.html" class="article-card">
+        <img src="../image/mukoindex-card.jpg" alt="武庫川一文字 青物指数" loading="lazy">
+        <h3>武庫川一文字 青物指数｜ブリ・サワラが釣れる日を先読み</h3>
+      </a>
+      <a href="../chouka-price.html" class="article-card">
+        <img src="../image/chouka-price-card.jpg" alt="釣果値段換算ツール" loading="lazy">
+        <h3>釣果値段換算ツール｜釣った魚はいくら？</h3>
+      </a>
+      <a href="../rod-zukan.html" class="article-card">
+        <img src="../image/rod-zukan-card.jpg" alt="ロッド図鑑" loading="lazy">
+        <h3>ロッド図鑑｜長さ・ルアー重量・継数からロッドを探す</h3>
+      </a>
+      <a href="../lure-gatya.html" class="article-card">
+        <img src="../image/home_gacha.jpg" alt="ルアーガチャ" loading="lazy">
+        <h3>ルアーガチャ｜今日投げるルアーをガチャで決めよう</h3>
+      </a>
+    </div>
+  </div>
+  <!-- 便利ツール end -->
+
+  <!-- 定番記事 start -->
+  <div>
+    <p>定番記事はこちら</p>
+    <div class="article-cards">
+      <a href="kansai-fishing-calendar.html" class="article-card">
+        <img src="../image/kansai-fishing-calendar.jpg" alt="関西の釣れる魚カレンダー" loading="lazy">
+        <h3>関西の釣れる魚カレンダー｜大阪湾・播磨灘の釣れる時期</h3>
+      </a>
+      <a href="fishing-calendar-zenkoku.html" class="article-card">
+        <img src="../image/fishing-calendar-zenkoku.jpg" alt="釣れる魚カレンダー【全国版】" loading="lazy">
+        <h3>釣れる魚カレンダー【全国版】｜魚ごとの釣れる時期と適水温</h3>
+      </a>
+      <a href="kansai-release-size.html" class="article-card">
+        <img src="../image/kansai-release-size.jpg" alt="関西のリリースサイズと抱卵時期" loading="lazy">
+        <h3>関西のリリースサイズと抱卵時期まとめ</h3>
+      </a>
+      <a href="lunker-size.html" class="article-card">
+        <img src="../image/lunker-size.jpg" alt="ランカーサイズの目安一覧" loading="lazy">
+        <h3>ランカーサイズの目安一覧｜尺メバル・座布団ヒラメは何cmから？</h3>
+      </a>
+    </div>
+  </div>
+  <!-- 定番記事 end -->
+
+  <p>
+    <a href="/lure-gatya.html" class="btn-recommend">本日のオススメルアーはこちら</a>
+  </p>
+
+  <!-- 著者 start -->
+  <aside class="author-box">
+    <span class="author-box__label">ABOUT ME</span>
+    <img class="author-box__icon" src="../image/tsuriboon_favicon.png" alt="こすけ" loading="lazy">
+    <div class="author-box__body">
+      <p class="author-box__name">こすけ</p>
+      <p class="author-box__role">ルアーマニア・関西の釣り人</p>
+      <p class="author-box__bio">「なぜこのルアーは釣れるのか」を、納得がいくまで調べずにはいられない釣り人。手元のルアーは400種類以上。仕事は研究とデータ分析の分野で、情報をしっかり精査して正確にお届けすることを大切にしています。ホームは関西。</p>
+      <a class="author-box__more" href="../tsuri-boon.html#author">プロフィールを見る</a>
+    </div>
+  </aside>
+  <!-- 著者 end -->
+</main>
+
+<footer>
+  <nav class="footer-nav">
+    <a href="../index.html">トップ</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="../form.html">お問い合わせ</a>
+    <a href="../sitemap.html">サイトマップ</a>
+  </nav>
+</footer>
+
+<!-- データ → ロジックの順に読み込む -->
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

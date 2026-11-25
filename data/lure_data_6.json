@@ -1,0 +1,777 @@
+[
+  {
+    "maker": "ADUSTA",
+    "maker_jap": "アダスタ",
+    "url": "https://www.adusta.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "サリュー",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure38.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "APIA",
+    "maker_jap": "アピア",
+    "url": "https://www.apiajapan.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "パンチライン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure23.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "アルゴ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure29.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "アップライジング",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure49.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "BASSDAY",
+    "maker_jap": "バスデイ",
+    "url": "https://www.bassday.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "レンジバイブ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure20.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "バス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "BLAZEYE",
+    "maker_jap": "ブレイズアイ",
+    "url": "https://blazeye.stores.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "レヴォルーク",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure28.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "BLUEBLUE",
+    "maker_jap": "ブルーブルー",
+    "url": "https://www.bluebluefishing.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ジョルティ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure4.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      },
+      {
+        "name": "ナレージ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure5.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "スネコン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure6.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "ブローウィン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure7.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング"
+        ]
+      },
+      {
+        "name": "ガボッツ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure8.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "BREADEN",
+    "maker_jap": "ブリーデン",
+    "url": "https://breaden.net/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "メタルマル",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure42.jpg",
+        "comment": "",
+        "genre": [
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "COREMAN",
+    "maker_jap": "コアマン",
+    "url": "https://www.coreman.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "VJ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure3.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      },
+      {
+        "name": "アイアンプレート",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure22.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "DAIWA",
+    "maker_jap": "ダイワ",
+    "url": "https://www.daiwa.com/jp",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "スイッチヒッター",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure16.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "セットアッパー",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure43.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング"
+        ]
+      },
+      {
+        "name": "TGベイト",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure50.jpg",
+        "comment": "",
+        "genre": [
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      },
+      {
+        "name": "つゆかぜ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure53.jpg",
+        "comment": "",
+        "genre": [
+          "アジング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "DUO",
+    "maker_jap": "デュオ",
+    "url": "https://www.duo-inc.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "マニック",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure10.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "フリッパー",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure52.jpg",
+        "comment": "",
+        "genre": [
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "ECLIPSE",
+    "maker_jap": "エクリプス",
+    "url": "https://eclipse.rings-fishing.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "バロール",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure45.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "ELEMENTS",
+    "maker_jap": "エレメンツ",
+    "url": "https://elmnts.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ダビンチ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure35.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "バス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "GOTO9",
+    "maker_jap": "ゴートゥーナイン",
+    "url": "https://goto9.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "SWARM",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure39.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "Gaea",
+    "maker_jap": "ガイア",
+    "url": "http://www.gaea-area.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "エリア10",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure15.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "JACKAL",
+    "maker_jap": "ジャッカル",
+    "url": "https://www.jackall.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ジナリ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure30.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "JACKSON",
+    "maker_jap": "ジャクソン",
+    "url": "https://jackson.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "アスリート",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure32.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "JADO PRODUCTS",
+    "maker_jap": "ジャドウプロダクツ",
+    "url": "https://ja-do.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "アーダゼロイノベーター",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure34.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "Jackson",
+    "maker_jap": "ジャクソン",
+    "url": "https://jackson.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "飛びすぎダニエル",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure41.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "LONGIN",
+    "maker_jap": "ロンジン",
+    "url": "https://www.longin.jp/top.html",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ウェイキーブー",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure36.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "MADNESS",
+    "maker_jap": "マドネス",
+    "url": "https://www.madness.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "バクリースピン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure33.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "Majorcraft",
+    "maker_jap": "メジャークラフト",
+    "url": "https://www.majorcraft.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ジグパラショート",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure51.jpg",
+        "comment": "",
+        "genre": [
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "Megabass",
+    "maker_jap": "メガバス",
+    "url": "https://www.megabass.co.jp/site/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "カゲロウ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure19.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "オニマル",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure24.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      },
+      {
+        "name": "x80-sw",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure26.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "POP SEA CREW",
+    "maker_jap": "ポップシークルー",
+    "url": "https://popseacrew.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "バンク",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure31.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "POPSEACREW",
+    "maker_jap": "ポップシークル―",
+    "url": "https://popseacrew.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "レクター",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure27.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "POZIDRIVE garage",
+    "maker_jap": "ポジドライブガレージ",
+    "url": "https://pdg.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ジグザグベイト",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure17.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "RACKEY CRAFT",
+    "maker_jap": "ラッキークラフト",
+    "url": "https://www.luckycraft.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ビーフリーズ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure9.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "ワンダー",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure11.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "アジング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "RAPALA",
+    "maker_jap": "ラパラ",
+    "url": "https://rapala.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "CD(カウントダウン)",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure1.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "RUDIE'S",
+    "maker_jap": "ルーディーズ",
+    "url": "https://rudies.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "魚子メタル",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure48.jpg",
+        "comment": "",
+        "genre": [
+          "アジング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "SHIMANO",
+    "maker_jap": "シマノ",
+    "url": "https://fish.shimano.com/ja-JP",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "サイレントアサシン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure18.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング"
+        ]
+      },
+      {
+        "name": "アーマジョイント60",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure55.jpg",
+        "comment": "",
+        "genre": [
+          "アジング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "TACKLE HOUSE",
+    "maker_jap": "タックルハウス",
+    "url": "https://www.tacklehouse.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ローリングベイト",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure2.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "TACKLEHOUSE",
+    "maker_jap": "タックルハウス",
+    "url": "https://www.tacklehouse.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "TKLM",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure37.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "Vallyhill",
+    "maker_jap": "バレーヒル",
+    "url": "https://valleyhill1.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "スーサン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure25.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "WANS",
+    "maker_jap": "わんず",
+    "url": "https://wans-fishing.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "しぼり",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure47.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "WaterLand",
+    "maker_jap": "ウォーターランド",
+    "url": "http://www.waterland.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "ジャークソニック",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure40.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "バス",
+          "ショアジギング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "Yamaria",
+    "maker_jap": "ヤマリア",
+    "url": "https://www.yamaria.co.jp/maria",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "フラペン",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure44.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング",
+          "フラットフィッシュ"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "ZIPBAITS",
+    "maker_jap": "ジップベイツ",
+    "url": "https://www.zipbaits.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "リッジ",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure54.jpg",
+        "comment": "",
+        "genre": [
+          "アジング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "hifumi creating",
+    "maker_jap": "ヒフミクリエイティング",
+    "url": "https://hifumi-creating.com/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "レイリア",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure21.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "ima",
+    "maker_jap": "アムズデザイン / アイマ",
+    "url": "https://www.ima-ams.co.jp/",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "KOSUKE",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure46.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "アジング"
+        ]
+      }
+    ]
+  },
+  {
+    "maker": "ima",
+    "maker_jap": "アムズデザイン / アイマ",
+    "url": "https://www.ima-ams.co.jp/product/products/list?category_id=7",
+    "link": "準備中",
+    "lures": [
+      {
+        "name": "SASUKE",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure12.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス",
+          "ショアジギング"
+        ]
+      },
+      {
+        "name": "ソバット",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure13.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      },
+      {
+        "name": "komomo",
+        "image": "https://raw.githubusercontent.com/tsuri-boon/tsuri-boon.github.io/main/image/lure14.jpg",
+        "comment": "",
+        "genre": [
+          "シーバス"
+        ]
+      }
+    ]
+  }
+]

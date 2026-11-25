@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>釣れる日がわかる！？武庫川一文字（ムコイチ）青物指数｜tsuri-boon</title>
+<meta name="description" content="武庫川一文字のブリ・サワラが釣れる日を指数化。42,371件の釣果データから今日〜7日先を先読み。">
+<link rel="canonical" href="https://tsuriboon.com/mukoindex.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/image/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
+<!-- OGP（Xなどで共有した時のカード表示） -->
+<meta property="og:title" content="釣れる日がわかる！？武庫川一文字（ムコイチ）青物指数｜tsuri-boon">
+<meta property="og:description" content="武庫川一文字のブリ・サワラが釣れる日を指数化。42,371件の釣果データから今日〜7日先を先読み。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="tsuri-boon">
+<meta property="og:url" content="https://tsuriboon.com/mukoindex.html">
+<!-- 画像：共有カード用の画像（横長 1200×630 推奨）を用意したら image/mukoindex.jpg に差し替え、twitter:card を summary_large_image にする -->
+<meta property="og:image" content="https://tsuriboon.com/image/mukoindex-card.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="釣れる日がわかる！？武庫川一文字（ムコイチ）青物指数｜tsuri-boon">
+<meta name="twitter:description" content="武庫川一文字のブリ・サワラが釣れる日を指数化。今日〜7日先を先読み。">
+<meta name="twitter:image" content="https://tsuriboon.com/image/mukoindex-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1YGK5NJLT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1YGK5NJLT');
+</script>
+
+<style>
+:root{
+  --c-brand:#0099CC;--c-sky:#D9F1FA;--c-ink:#143246;--c-sub:#55707F;
+  --c-orange:#FF6B35;--c-yellow:#FFC53D;
+  --font-body:"M PLUS Rounded 1c","游ゴシック体",YuGothic,"メイリオ",Meiryo,sans-serif;
+  --line:2.5px solid var(--c-ink);
+  --pop:5px 5px 0 rgba(20,50,70,.9);--pop-sm:3px 3px 0 rgba(20,50,70,.9);
+  --acc:var(--c-brand);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:var(--font-body);font-weight:500;color:var(--c-ink);line-height:1.7;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(255,255,255,.7) 0 6px,transparent 7px),
+    radial-gradient(circle at 80% 40%,rgba(255,255,255,.6) 0 4px,transparent 5px),
+    radial-gradient(circle at 55% 75%,rgba(255,255,255,.55) 0 5px,transparent 6px),
+    var(--c-sky);
+  background-size:420px 420px,380px 380px,460px 460px,auto;overflow-x:hidden}
+.num{font-family:"Oswald",sans-serif;font-variant-numeric:tabular-nums}
+img{max-width:100%}
+.site-header{position:sticky;top:0;z-index:100;background:var(--c-brand);border-bottom:var(--line)}
+.site-header-inner{max-width:1060px;margin:0 auto;padding:6px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo img{height:48px;width:auto;display:block}
+.global-nav{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;padding:4px 0}
+.global-nav::-webkit-scrollbar{display:none}
+.global-nav a{color:var(--c-ink);background:#fff;border:2px solid var(--c-ink);border-radius:999px;
+  text-decoration:none;font-weight:700;font-size:13px;padding:6px 14px;box-shadow:2px 2px 0 rgba(20,50,70,.9);transition:.12s}
+.global-nav a:hover{background:var(--c-yellow);transform:translate(1px,1px);box-shadow:1px 1px 0 rgba(20,50,70,.9)}
+@media(max-width:640px){.site-header-inner{flex-direction:column;align-items:flex-start;gap:0;padding:6px 12px 4px}
+  .logo img{height:42px}.global-nav{width:100%;padding:4px 2px 8px}.global-nav a{font-size:12.5px;padding:5px 12px}}
+
+.wrap{max-width:680px;margin:0 auto;padding:28px 16px 72px}
+.hero{text-align:center;margin-bottom:20px}
+.hero-badge{display:inline-block;background:var(--c-yellow);border:var(--line);border-radius:999px;box-shadow:var(--pop-sm);
+  font-size:12px;font-weight:800;padding:5px 18px;margin-bottom:14px;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(24px,6vw,34px);font-weight:800;line-height:1.2;
+  text-shadow:2px 2px 0 #fff,-2px 2px 0 #fff,2px -2px 0 #fff,-2px -2px 0 #fff,4px 4px 0 rgba(0,153,204,.3)}
+.hero .lede{font-size:12.5px;font-weight:700;color:var(--c-sub);margin-top:8px}
+.tabs{display:flex;gap:10px;justify-content:center;margin:22px 0}
+.tab{background:#fff;border:var(--line);border-radius:999px;box-shadow:var(--pop-sm);
+  font-family:var(--font-body);font-weight:800;font-size:14px;padding:9px 24px;cursor:pointer;color:var(--c-ink);transition:.12s}
+.tab.sel{background:var(--acc);color:#fff;transform:translate(1px,1px);box-shadow:1px 1px 0 rgba(20,50,70,.9)}
+
+.deck{position:relative;touch-action:pan-y}
+.card{background:#fff;border:var(--line);border-radius:22px;box-shadow:var(--pop);overflow:hidden;position:relative}
+
+.l1{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 0}
+.l1 .dt{font-family:"Oswald";font-size:24px;font-weight:700}
+.l1 .dt .wd{color:var(--c-sub);font-size:16px;margin-left:4px}
+.l1 .when{background:var(--c-orange);color:#fff;border:2px solid var(--c-ink);border-radius:999px;
+  font-size:10px;font-weight:800;padding:3px 12px;letter-spacing:.08em;transform:rotate(-2deg)}
+
+.l2{display:flex;align-items:center;gap:16px;padding:10px 20px 18px}
+.gauge{position:relative;width:130px;height:130px;flex-shrink:0}
+.gauge svg{width:130px;height:130px}
+.gauge .big{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Oswald";font-weight:700;font-size:50px;color:var(--acc)}
+.l2 .rk{flex:1}
+.l2 .rk .word{display:inline-block;background:var(--c-yellow);border:2px solid var(--c-ink);border-radius:999px;
+  font-size:17px;font-weight:800;padding:4px 16px;box-shadow:var(--pop-sm)}
+.l2 .rk .sub{font-size:12px;color:var(--c-sub);font-weight:700;margin-top:8px;line-height:1.5}
+.l2 .rk .scale{font-family:"Oswald";font-size:12px;font-weight:700;color:var(--c-sub);margin-top:6px}
+.l2 .rk .track{font-size:11px;font-weight:700;color:var(--c-sub);margin-top:6px;line-height:1.5}
+
+.l3{display:flex;gap:8px;padding:0 20px 16px}
+.l3 .it{flex:1;text-align:center;background:var(--c-sky);border:2px solid var(--c-ink);border-radius:12px;padding:8px 4px}
+.l3 .it .k{font-size:9px;color:var(--c-sub);font-weight:700;letter-spacing:.08em}
+.l3 .it .v{font-family:"Oswald";font-size:16px;font-weight:700;margin-top:2px;white-space:nowrap}
+.l3 .it .wx{font-size:22px;line-height:1;margin-top:1px}
+.l3 .it .wxt{font-size:10px;font-weight:700;color:var(--c-ink);margin-top:1px}
+.moon{width:12px;height:12px;border-radius:50%;display:inline-block;vertical-align:-1px;margin-right:4px;border:1px solid var(--c-ink)}
+
+.l4{padding:0 20px 20px}
+.row{margin-bottom:14px}.row:last-child{margin-bottom:0}
+.row .rk2{font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--c-sub);margin-bottom:6px}
+.mixbar{display:flex;height:22px;border:2px solid var(--c-ink);border-radius:5px;overflow:hidden}
+.mixbar div{display:flex;align-items:center;justify-content:center;font-family:"Oswald";font-weight:700;font-size:10px;color:#fff}
+.mixleg{display:flex;gap:10px;margin-top:6px;font-size:10px;font-weight:700;color:var(--c-sub);flex-wrap:wrap}
+.mixleg i{width:8px;height:8px;display:inline-block;margin-right:4px;border:1px solid var(--c-ink);border-radius:1px}
+.bait{display:flex;align-items:center;gap:10px}
+.baitLvl{font-family:var(--font-body);font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px;border:2px solid var(--c-ink);box-shadow:var(--pop-sm)}
+.baitLvl.多い{background:#3FBf7A;color:#fff}
+.baitLvl.並{background:#fff;color:var(--c-sub)}
+.baitLvl.少ない{background:#FFB0A0;color:var(--c-ink)}
+.bait .txt{font-size:11px;color:var(--c-sub);font-weight:700;line-height:1.5}
+
+.dots{display:flex;gap:7px;justify-content:center;margin-top:16px}
+.dots i{width:7px;height:7px;border-radius:50%;background:#fff;border:2px solid var(--c-ink);transition:.2s}
+.dots i.on{background:var(--acc);width:20px;border-radius:4px}
+.nav{position:absolute;top:36px;width:42px;height:130px;display:flex;align-items:center;justify-content:center;
+  z-index:4;cursor:pointer;border:none;background:none;font-size:32px;font-family:"Oswald";color:var(--c-ink);opacity:.35;transition:.2s}
+.nav:hover{opacity:.85}.nav.prev{left:-12px}.nav.next{right:-12px}
+.nav:disabled{opacity:.1}
+.hint{text-align:center;font-size:10px;font-weight:700;color:var(--c-sub);letter-spacing:.12em;margin-top:10px;opacity:.7}
+
+.block{margin-top:28px}
+.blockHead{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.blockIcon{width:32px;height:32px;border:var(--line);border-radius:10px;background:#fff;box-shadow:var(--pop-sm);display:grid;place-items:center;font-size:16px}
+.blockTitle{font-size:16px;font-weight:800}
+.mon{font-family:"Oswald";font-size:14px;font-weight:700;margin:18px 0 8px;
+  display:inline-block;background:var(--c-yellow);border:2px solid var(--c-ink);border-radius:8px;padding:2px 12px;box-shadow:var(--pop-sm)}
+.wk,.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.wk{margin-bottom:6px}.wk span{text-align:center;font-size:9px;font-weight:700;color:var(--c-sub)}
+.hc{aspect-ratio:1;border:2px solid var(--c-ink);border-radius:8px;position:relative;font-family:"Oswald";cursor:pointer;transition:transform .1s;background:#fff}
+.hc:active{transform:scale(.92)}
+.hc .d{position:absolute;top:2px;left:4px;font-size:8px;font-weight:500;color:var(--c-sub)}
+.hc .iv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:var(--c-ink)}
+.hc.hi .d{color:rgba(255,255,255,.85)}
+.hc.hi .iv{color:#fff}
+.heatKey{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:10px;font-weight:700;color:var(--c-sub)}
+.heatKey .kbar{flex:1;height:8px;border:2px solid var(--c-ink);border-radius:4px;background:linear-gradient(90deg,#fff,var(--acc))}
+
+.foot{background:#fff;border:var(--line);border-radius:18px;box-shadow:var(--pop);padding:18px 20px;margin-top:28px;font-size:12px;font-weight:500;line-height:1.85;color:var(--c-sub)}
+.foot b{color:var(--c-ink);font-weight:800}
+.site-footer{margin-top:48px;background:var(--c-ink);border-top:var(--line);color:#fff;text-align:center;padding:28px 16px 22px}
+.footer-nav a{color:rgba(255,255,255,.85);font-size:12.5px;font-weight:700;margin:0 10px;text-decoration:none}
+.footer-nav a:hover{color:var(--c-yellow);text-decoration:underline}
+.copyright{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:12px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.wkRow{background:var(--c-sky);border:2px solid var(--c-ink);border-radius:12px;padding:12px 14px;margin-top:6px}
+.wkMain{font-size:14px;font-weight:700;color:var(--c-ink)}
+.wkMain b{font-weight:800;color:var(--c-brand);font-size:16px}
+.wkSrc{font-size:9.5px;color:var(--c-sub);font-weight:700;margin-top:6px}
+
+/* 直近3日の釣果 */
+.rcTbl{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:var(--line);border-radius:14px;box-shadow:var(--pop-sm);overflow:hidden;font-size:12.5px}
+.rcTbl th,.rcTbl td{padding:7px 8px;text-align:center;border-bottom:1.5px solid #dfeef4}
+.rcTbl tr:last-child td{border-bottom:none}
+.rcTbl th{background:var(--c-ink);color:#fff;font-size:11px;font-weight:800}
+.rcTbl td:first-child{font-family:"Oswald";font-weight:700;white-space:nowrap}
+.rcTbl .n{font-family:"Oswald";font-size:15px;font-weight:700}
+.rcTbl .mx{color:var(--c-orange);font-weight:800}
+.rcTbl .ix{display:block;font-size:9.5px;font-weight:700;color:var(--c-sub)}
+.rcTbl .zero{color:var(--c-sub)}
+.rcSrc{font-size:10px;font-weight:700;color:var(--c-sub);line-height:1.6;margin-top:8px}
+.rcSrc a{color:var(--c-sub)}
+
+/* おすすめ記事 */
+.recBlock{margin-top:32px}
+.article-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.article-card{position:relative;display:block;text-decoration:none;color:var(--c-ink);background:#fff;
+  border:var(--line);border-radius:16px;box-shadow:var(--pop-sm);overflow:hidden;transition:transform .12s,box-shadow .12s}
+.article-card:hover,.article-card:focus-visible{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(20,50,70,.9)}
+.article-card .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-bottom:2px solid var(--c-ink);background:var(--c-sky)}
+.article-tag{position:absolute;top:8px;left:8px;background:var(--c-yellow);border:2px solid var(--c-ink);
+  font-size:10.5px;font-weight:800;padding:2px 9px;border-radius:999px;transform:rotate(-2deg)}
+.article-card h3{font-size:12.5px;font-weight:800;line-height:1.5;margin:0;padding:10px 12px 13px}
+
+/* 解説ガイド（囲いなし・読み物） */
+.guide{margin-top:40px;padding:0 4px}
+.guide-lead-h{font-size:19px;font-weight:800;color:var(--c-ink);line-height:1.5;margin-bottom:14px;
+  text-shadow:1px 1px 0 #fff}
+.guide-lead{font-size:14.5px;font-weight:500;line-height:2;margin:12px 0}
+.guide h2{font-size:18px;font-weight:800;color:var(--c-ink);margin:32px 0 12px;padding-left:12px;
+  border-left:5px solid var(--c-brand);line-height:1.5}
+.guide p{font-size:14px;font-weight:500;line-height:2;margin:12px 0;color:var(--c-ink)}
+.guide b{font-weight:800;color:var(--c-ink)}
+.guide-spec{margin:16px 0;padding:0;list-style:none;background:#fff;border:2px solid var(--c-ink);
+  border-radius:12px;box-shadow:var(--pop-sm);overflow:hidden}
+.guide-spec li{font-size:13px;font-weight:500;line-height:1.75;padding:11px 14px 11px 38px;position:relative;
+  border-bottom:1px dashed #d9e6ec}
+.guide-spec li::before{content:"✓";position:absolute;left:13px;top:11px;font-weight:800;color:var(--c-brand)}
+.guide-spec li:last-child{border-bottom:none}
+.guide-cta{margin-top:22px;padding:14px 16px;background:var(--c-sky);border:2px solid var(--c-ink);
+  border-radius:12px;font-size:13px!important;font-weight:700!important}
+.guide-cta a{color:var(--c-brand);font-weight:800;text-decoration:underline}
+ 
+/* Xでシェア */
+.share-row{text-align:center;margin-top:16px}
+.xshare{display:inline-flex;align-items:center;gap:8px;background:var(--c-ink);color:#fff;
+  border:var(--line);border-radius:999px;box-shadow:var(--pop-sm);font-family:var(--font-body);
+  font-weight:800;font-size:14px;padding:10px 22px;cursor:pointer;transition:.12s}
+.xshare:hover{transform:translate(1px,1px);box-shadow:1px 1px 0 rgba(20,50,70,.9)}
+.xshare svg{width:15px;height:15px;fill:#fff}
+</style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9034047517729390"
+       crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="logo"><img src="image/tsuriboon_logo_header.png" alt="tsuri-boon ロゴ" width="128" height="64"></a>
+    <nav class="global-nav" aria-label="メインメニュー">
+      <a href="lure-gatya.html">ルアーガチャ</a>
+      <a href="lure-zukan.html">ルアー図鑑</a>
+      <a href="rod-zukan.html">ロッド図鑑</a>
+      <a href="maker-zukan.html">メーカー図鑑</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="hero-badge">約4万件のデータから算出！</span>
+    <h1>武庫一の釣れる日がわかる！武庫川一文字 青物指数</h1>
+    <div class="lede">武庫川一文字で、ブリやサワラが「釣れる日」をデータで先読み</div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab sel" data-k="buri">🐟 ブリ系</button>
+    <button class="tab" data-k="sawara">🔪 サワラ系</button>
+  </div>
+
+  <div class="deck" id="deck">
+    <button class="nav prev" id="prev">&#8249;</button>
+    <button class="nav next" id="next">&#8250;</button>
+    <div class="card" id="card"></div>
+    <div class="dots" id="dots"></div>
+    <div class="hint">&#8249; スワイプで7日先まで &#8250;</div>
+  </div>
+    
+ <div class="share-row">
+    <button class="xshare" id="xshare" type="button" aria-label="Xでシェア">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.2h3.7l-8 9.1L24 22.8h-7.4l-5.8-7.6-6.6 7.6H.4l8.5-9.7L0 1.2h7.6l5.2 6.9 5-6.9Zm-1.3 19.4h2L6.5 3.3H4.3l13.3 17.3Z"/></svg>
+      いまの指数をXでシェア
+    </button>
+  </div>
+    
+  <div class="block" id="recentBlock" hidden>
+    <div class="blockHead"><span class="blockIcon">🎣</span><span class="blockTitle">直近3日の青物釣果</span></div>
+    <div id="recent"></div>
+  </div>
+
+  <div class="block">
+    <div class="blockHead"><span class="blockIcon">📅</span><span class="blockTitle">釣れる日はいつ？ 釣果指数カレンダー</span></div>
+    <div id="cal"></div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+  <div class="block recBlock">
+    <div class="blockHead"><span class="blockIcon">📖</span><span class="blockTitle">武庫川一文字でルアーを選ぶなら</span></div>
+    <div class="article-cards">
+      <a href="article/mukogawa-kakushi-lure.html" class="article-card">
+        <img class="thumb" src="image/mukogawa-kakushi-lure.jpg" alt="武庫川一文字で釣れてる人が使っている隠れた名作ルアー4選" loading="lazy">
+        <span class="article-tag">厳選</span>
+        <h3>武庫川一文字で釣れてる人が使っている隠れた名作ルアー4選</h3>
+      </a>
+      <a href="article/2026-new-lure.html" class="article-card">
+        <img class="thumb" src="image/2026-new-lure.jpg" alt="2026年新作ルアーまとめ" loading="lazy">
+        <span class="article-tag">まとめ</span>
+        <h3>2026年新作ルアーまとめ＜メーカー別一覧＞</h3>
+      </a>
+    </div>
+  </div>
+</div>
+    
+ <section class="guide">
+    <h2 class="guide-lead-h">現役データサイエンティストが、本気で作った青物予報です</h2>
+    <p class="guide-lead">「今週末、武庫川一文字（ムコイチ）でブリやサワラは釣れるのか？」——この問いに感覚ではなくデータで答えるため、<b>現役のデータサイエンティストが実務と同じ手法で</b>この青物指数を構築しました。世に多い「なんとなくの経験則」や占い的な釣果予報とは、作り方から違います。</p>
+    <ul class="guide-spec">
+      <li><b>約42,000件・18年分</b>の釣果を1件ずつ構造化。魚種の表記揺れ（ツバス・ハマチ・メジロ・ブリ）まで整理</li>
+      <li>潮汐（天文計算）・季節・気象・水温を各釣行日に紐付け、<b>勾配ブースティング（LightGBM）</b>で学習</li>
+      <li>未来の情報を誤って使う<b>データリークを厳密に排除</b>し、時系列を守って検証</li>
+      <li>「釣り人が多い日は報告も増える」といった<b>観測バイアスを補正</b></li>
+      <li>予測精度は検証で<b>AUC 0.79〜0.84</b>（釣れる日を正しく上位に並べられる度合い）</li>
+    </ul>
+    <p>指数は「絶対に釣れる確率」ではなく、<b>その時期の中での相対的な釣れやすさの順位</b>です。だから「オフシーズンなのに指数が高すぎる」といった不自然さが起きません。ここから先は、その4万件が明かした武庫川一文字の青物の真実を、いくつか紹介します。</p>
+ 
+    <h2>武庫川一文字の青物は、いつ釣れる？</h2>
+    <p>まず結論から。18年分の実データでは、<b>ブリ系（ツバス・ハマチ・メジロ・ブリ）の釣果は10月と11月に集中</b>し、この2か月だけで年間の約6割を占めます。<b>サワラ系（サゴシ・サワラ）は9〜10月がピーク</b>で、ブリより少し早く始まり、シーズンも長めです。</p>
+    <p>春（4〜6月）にも小さな山があり、ハマチやサゴシが狙えます。逆に<b>2〜3月はほぼオフシーズン</b>で、青物の釣果はほとんど記録されていません。上のカレンダーでは、月内の半月ごとの変化まで確認できます。</p>
+ 
+    <h2>「大潮だから釣れる」は本当か？</h2>
+    <p>釣具屋でも雑誌でも当たり前のように語られる「青物は大潮に釣れる」。これを約4万件で検証しました。結果は意外なもので、<b>ハイシーズンの潮回り別の釣果率は、大潮58.2%・中潮58.5%・小潮58.8%とほぼ横並び</b>。統計的にも有意な差は出ませんでした。</p>
+    <p>予測モデルの中でも、潮汐の寄与はわずか数％です。唯一はっきり言えるのは「<b>潮がまったく動かない日だけは避けたほうがいい</b>」ということ。大潮か小潮かで釣行日を決める根拠は、少なくともこのデータには見当たりませんでした。</p>
+ 
+    <h2>土日は本当に釣れる？——「人が多いだけ」の真実</h2>
+    <p>「土日は釣果報告が多いから釣れる」と思われがちです。確かに週末の釣果報告は平日より約13%多い。しかし魚種別に分けると、<b>増えているのはチヌやサビキ釣りの釣果で、青物の報告数は平日と週末でほぼ同じ</b>でした。</p>
+    <p>さらに「1人あたりの釣果」で見ると、ブリはむしろ<b>週末のほうが2割ほど少ない</b>。土日は釣り人が増え、ポイントが混み合うためと考えられます。「土日はよく釣れる」は報告総数が多いことによる錯覚で、青物を本気で狙うなら平日のほうが分がいい、という結果です。</p>
+ 
+    <h2>なぜこの数年、ムコイチで青物が増えたのか（そして減っているのか）</h2>
+    <p>ムコイチのブリ系の釣果比率は、<b>2016年の約3%から2022年には60%超へと急増</b>しました。この時期は、2017年8月から2025年4月まで続いた<b>観測史上最長の黒潮大蛇行</b>と一致します。黒潮の流路が変わり、青物の回遊が大阪湾に大きく入り込んだためと考えられます。</p>
+    <p>その大蛇行は2025年4月に終息しました。ブリ系の比率は2022年の60%から<b>2026年は21%まで低下</b>しており、青物の当たり年は静かに終わりつつあります。この指数が「その年に魚がいるか」を最重視しているのは、こうした年ごとの資源変動こそが釣果を左右する最大の要因だからです。</p>
+ 
+    <p class="guide-cta">武庫川一文字でのルアー選びは、<a href="article/mukogawa-kakushi-lure.html">武庫川一文字で釣れてる人が使っている隠れた名作ルアー4選</a>や<a href="article/2026-new-lure.html">2026年新作ルアーまとめ</a>も参考にどうぞ。</p>
+  </section>
+ 
+    
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="index.html">トップ</a>
+    <a href="article/privacy.html">プライバシーポリシー</a>
+    <a href="form.html">お問い合わせ</a>
+    <a href="sitemap.html">サイトマップ</a>
+  </nav>
+  <p class="copyright">© 2025 tsuri-boon</p>
+</footer>
+
+<script>
+let D=null;  // data/mukoindex.json から読み込む（fishing-forecast の predict.py が毎日更新）
+const WMO={"0":{"t":"快晴","i":"☀"},"1":{"t":"晴れ","i":"🌤"},"2":{"t":"薄曇り","i":"⛅"},"3":{"t":"曇り","i":"☁"},"45":{"t":"霧","i":"🌫"},"48":{"t":"霧","i":"🌫"},"51":{"t":"小雨","i":"🌦"},"53":{"t":"雨","i":"🌦"},"55":{"t":"強い雨","i":"🌧"},"56":{"t":"凍雨","i":"🌧"},"57":{"t":"凍雨","i":"🌧"},"61":{"t":"小雨","i":"🌦"},"63":{"t":"雨","i":"🌧"},"65":{"t":"大雨","i":"🌧"},"66":{"t":"みぞれ","i":"🌧"},"67":{"t":"みぞれ","i":"🌧"},"71":{"t":"小雪","i":"🌨"},"73":{"t":"雪","i":"🌨"},"75":{"t":"大雪","i":"❄"},"77":{"t":"雪","i":"🌨"},"80":{"t":"にわか雨","i":"🌦"},"81":{"t":"にわか雨","i":"🌧"},"82":{"t":"激しい雨","i":"⛈"},"85":{"t":"にわか雪","i":"🌨"},"86":{"t":"にわか雪","i":"❄"},"95":{"t":"雷雨","i":"⛈"},"96":{"t":"雷雨","i":"⛈"},"99":{"t":"雷雨","i":"⛈"}};
+const MUKO={lat:34.6833,lon:135.3833};
+let WX=null;
+async function loadWeather(){
+  try{
+    const u=`https://api.open-meteo.com/v1/forecast?latitude=${MUKO.lat}&longitude=${MUKO.lon}`
+      +`&daily=weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max,wind_direction_10m_dominant`
+      +`&timezone=Asia%2FTokyo&forecast_days=7`;
+    const r=await fetch(u);
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const j=await r.json(),d=j.daily;
+    if(!d||!d.time)throw new Error('no daily in response');
+    WX={};
+    d.time.forEach((t,i)=>{WX[t]={code:d.weather_code[i],tmax:Math.round(d.temperature_2m_max[i]),
+      tmin:Math.round(d.temperature_2m_min[i]),wind:Math.round(d.wind_speed_10m_max[i]),wdir:d.wind_direction_10m_dominant[i]};});
+    card();
+  }catch(e){
+    WX='fail'; card();
+  }
+}
+function windDir(deg){const dd=['北','北東','東','南東','南','南西','西','北西'];return dd[Math.round(deg/45)%8];}
+function calLimitJST(){
+  const now=new Date();
+  const j=new Date(now.getTime()+(now.getTimezoneOffset()+540)*60000);
+  // 今月から3ヶ月先の月末まで（計4ヶ月分）
+  const end=new Date(j.getFullYear(), j.getMonth()+4, 0); // 翌々々月の0日=3ヶ月先の月末
+  return end.getFullYear()+'-'+String(end.getMonth()+1).padStart(2,'0')+'-'+String(end.getDate()).padStart(2,'0');
+}
+let WEEKLY=null;
+const CFG={
+  buri:{c:'#1FA9A0',sp:['ツバス','ハマチ','メジロ','ブリ'],
+    col:{'ツバス':'#7ECFC8','ハマチ':'#FF6B35','メジロ':'#1FA9A0','ブリ':'#143246'},
+    auc:'0.78',name:'ブリ系（ツバス・ハマチ・メジロ・ブリ）'},
+  sawara:{c:'#0099CC',sp:['サゴシ','サワラ'],
+    col:{'サゴシ':'#5BB8DD','サワラ':'#0099CC'},
+    auc:'0.84',name:'サワラ系（サゴシ・サワラ）'}
+};
+let K='buri',cur=0;
+const WD=['日','月','火','水','木','金','土'];
+function rank(i){
+  if(i>=80)return['絶好釣','爆釣予報!この時期で最高の条件'];
+  if(i>=60)return['狙い目','条件は整っている'];
+  if(i>=40)return['ふつう','悪くはない'];
+  if(i>=20)return['玄人向け','条件はいまひとつ'];
+  return['低調','この時期の底'];
+}
+function moon(ma){const l=Math.abs(Math.cos(ma/29.53*2*Math.PI)),p=Math.round(l*100);
+  return `<span class="moon" style="background:radial-gradient(circle,#FFC53D 0%,#FFC53D ${p}%,#dfeef4 ${p}%)"></span>`;}
+function todayJST(){
+  // 日本時間の今日の日付(YYYY-MM-DD)。UTCだと早朝に前日になるのを防ぐ
+  const now=new Date();
+  const jst=new Date(now.getTime()+(now.getTimezoneOffset()+540)*60000);
+  return jst.getFullYear()+'-'+String(jst.getMonth()+1).padStart(2,'0')+'-'+String(jst.getDate()).padStart(2,'0');
+}
+function si(rows){const t=todayJST();const i=rows.findIndex(r=>r.d>=t);return i<0?0:i;}
+function wxHtml(r){
+  const cfg=CFG[K];
+  const wx=(WX&&WX!=='fail')?WX[r.d]:null;
+  const tide=`<div class="it"><div class="k">潮回り</div><div class="v" style="color:${cfg.c}">${r.t}</div></div>`;
+  let temp,weather;
+  if(wx){
+    const w=WMO[wx.code]||{t:'—',i:'·'};
+    temp=`<div class="it"><div class="k">気温</div><div class="v">${wx.tmax}°<span style="color:var(--c-sub);font-size:12px">/${wx.tmin}°</span></div></div>`;
+    weather=`<div class="it"><div class="k">天気</div><div class="wx">${w.i}</div><div class="wxt">${w.t}</div></div>`;
+  }else{
+    // 取得前・失敗・8日目以降
+    const dash=(WX==='fail'||WX===null)?'…':'—';
+    temp=`<div class="it"><div class="k">気温</div><div class="v" style="color:var(--c-sub)">${dash}</div></div>`;
+    weather=`<div class="it"><div class="k">天気</div><div class="v" style="color:var(--c-sub)">${dash}</div></div>`;
+  }
+  return tide+temp+weather;
+}
+function weeklyHtml(){
+  if(typeof WEEKLY==='undefined'||!WEEKLY||!WEEKLY.main)return '';
+  return `<div class="row wkRow">
+    <div class="wkMain">今のメインベイトは <b>${WEEKLY.main}</b></div>
+    <div class="wkSrc">直近7日の渡船釣果より・${WEEKLY.updated}更新</div>
+  </div>`;
+}
+function recent(){
+  // 武庫川渡船の釣果報告のあった直近3日（predict.py の recent）。データが無ければ枠ごと出さない
+  const rs=D.recent;
+  if(!rs||!rs.length)return;
+  const td=(r,k)=>{
+    const x=r[k],ix=(D[k].find(y=>y.d===r.d)||{}).i;
+    return `<td class="${x.n?'':'zero'}"><span class="n">${x.n}</span>匹${x.max?` <span class="mx">最大${x.max}cm</span>`:''}${ix!=null?`<span class="ix">指数 ${ix}</span>`:''}</td>`;};
+  document.getElementById('recent').innerHTML=`<table class="rcTbl">
+    <tr><th>日付</th><th>ブリ系</th><th>サワラ系</th></tr>`
+    +rs.map(r=>{const dt=new Date(r.d);return `<tr><td>${dt.getMonth()+1}/${dt.getDate()}(${r.w})</td>${td(r,'buri')}${td(r,'sawara')}</tr>`;}).join('')
+    +`</table><div class="rcSrc">※<a href="https://www.amagyo.com/choukax.php" target="_blank" rel="noopener">武庫川渡船</a>の釣果報告をもとに集計（釣果報告のあった日のみ）。</div>`;
+  document.getElementById('recentBlock').hidden=false;
+}
+function trackHtml(i){
+  // 指数の帯ごとの過去の実績（predict.py が直近5年を答えを見ずに予測して集計）
+  const b=D.track&&D.track[K]&&D.track[K].find(x=>i>=x.lo&&i<=x.hi);
+  if(!b||b.p1==null)return '';
+  const nm=CFG[K].name.split('（')[0];
+  return `<div class="track">過去5年、指数${b.lo}〜${b.hi}の日は<br>釣果報告の<b>${b.p1}%</b>に${nm}（3匹以上は${b.p3}%）</div>`;
+}
+function card(){
+  const cfg=CFG[K],rows=D[K],base=si(rows),r=rows[base+cur];
+  if(!r)return;
+  const [rk,sub]=rank(r.i),dt=new Date(r.d);
+  const rel=cur===0?'TODAY':cur===1?'TOMORROW':'';
+  const mo=+r.d.slice(5,7),mx=D.mix[K][mo],bt=D.bait[mo];
+  let mb='',ml='';
+  if(mx.t>0)cfg.sp.forEach(s=>{const v=mx.c[s]||0;if(!v)return;
+    mb+=`<div style="width:${v}%;background:${cfg.col[s]}">${v>=12?v:''}</div>`;
+    ml+=`<span><i style="background:${cfg.col[s]}"></i>${s} ${v}%</span>`;});
+  const spTxt=(bt.sp&&bt.sp.length)?bt.sp.join('・'):'—';
+  const lvlTxt={'多い':'濃い。青物が接岸しやすい','並':'平年並み','少ない':'薄め'}[bt.lvl];
+  const bx=`主体は<b style="color:var(--c-ink)">${spTxt}</b>／量は${lvlTxt}`;
+  document.getElementById('card').innerHTML=`
+    <div class="l1"><div class="dt">${dt.getMonth()+1}/${dt.getDate()}<span class="wd">(${WD[dt.getDay()]})</span></div>${rel?`<div class="when">${rel}</div>`:''}</div>
+    <div class="l2">
+      <div class="gauge"><svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#dfeef4" stroke-width="7"/>
+        <circle cx="50" cy="50" r="44" fill="none" stroke="${cfg.c}" stroke-width="7" stroke-linecap="round"
+          stroke-dasharray="${r.i/100*276} 276" transform="rotate(-90 50 50)" style="transition:.4s"/>
+      </svg><div class="big num">${r.i}</div></div>
+      <div class="rk"><div class="word">${rk}</div><div class="sub">${sub}</div><div class="scale">指数 ${r.i} / 100</div>${trackHtml(r.i)}</div>
+    </div>
+    <div class="l3">${wxHtml(r)}</div>
+    <div class="l4">
+      <div class="row"><div class="rk2">この時期に上がる魚（過去実績）</div><div class="mixbar">${mb}</div><div class="mixleg">${ml}</div></div>
+      <div class="row"><div class="rk2">ベイトの傾向（例年の${mo}月）</div>
+        <div class="bait"><span class="baitLvl ${bt.lvl}">${bt.lvl}</span><span class="txt">${bx}</span></div></div>
+      ${weeklyHtml()}
+    </div>`;
+  document.getElementById('dots').innerHTML=rows.slice(base,base+7).map((_,i)=>`<i class="${i===cur?'on':''}"></i>`).join('');
+  document.getElementById('prev').disabled=cur<=0;
+  document.getElementById('next').disabled=cur>=6||!rows[base+cur+1];
+}
+function cal(){
+  const cfg=CFG[K],rows=D[K],lim=calLimitJST(),months={};
+  rows.forEach(r=>{if(r.d>lim)return;const k=r.d.slice(0,7);(months[k]=months[k]||[]).push(r);});
+  let h='';
+  Object.entries(months).forEach(([k,rs])=>{
+    h+=`<div class="mon">${k.replace('-','.')}</div>
+      <div class="wk"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div><div class="grid">`;
+    const pad=new Date(rs[0].d).getDay();
+    for(let i=0;i<pad;i++)h+='<div class="hc" style="border:none;background:transparent"></div>';
+    rs.forEach(r=>{const on=r.i>=55,a=on?(0.4+0.6*(r.i-55)/45):1;
+      const bg=on?`color-mix(in srgb,${cfg.c} ${Math.round(a*100)}%,#fff)`:'#fff';
+      h+=`<div class="hc ${on?'hi':''}" style="background:${bg}" data-d="${r.d}" title="${r.d} 指数${r.i}"><span class="d">${r.d.slice(8)}</span><span class="iv">${r.i}</span></div>`;});
+    h+='</div>';
+  });
+  h+='<div class="heatKey"><span>低</span><div class="kbar"></div><span>高</span></div>';
+  document.getElementById('cal').innerHTML=h;
+  document.querySelectorAll('.hc[data-d]').forEach(c=>c.onclick=()=>{
+    const base=si(rows),i=rows.findIndex(r=>r.d===c.dataset.d)-base;
+    if(i>=0&&i<7){cur=i;card();document.getElementById('deck').scrollIntoView({behavior:'smooth',block:'center'});}});
+}
+function render(){
+  if(!D)return;
+  const cfg=CFG[K];
+  document.documentElement.style.setProperty('--acc',cfg.c);
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('sel',b.dataset.k===K));
+  cur=0;card();cal();
+  document.getElementById('foot').innerHTML=`
+    <b>指数の読み方</b><br>直近90日の中での相対的な釣れやすさの順位。100に近いほどこの時期で条件が良い日です。`;
+}
+// ---- Xでシェア：表示中の指数カードを画像にして、URL・ハッシュタグ付きで共有する ----
+const SHARE_URL='https://tsuriboon.com/mukoindex.html';
+// ハッシュタグは行ごとに並べる
+const SHARE_TAGS=[['武庫川一文字','ムコイチ','青物釣果'],['tsuriboon','ツリブーン']];
+function shareRow(){const rows=D&&D[K];return rows?rows[si(rows)+cur]:null;}
+// 投稿文の全体（改行・URL・ハッシュタグ込み）
+function shareText(r){
+  const tags=SHARE_TAGS.map(l=>l.map(t=>'#'+t).join(' ')).join('\n');
+  if(!r)return `【武庫川一文字 青物指数】\n青物が釣れる日をデータで先読み！🎣\n▼明日以降の予想はこちら\n${SHARE_URL}\n\n${tags}`;
+  const dt=new Date(r.d),nm=CFG[K].name.split('（')[0];
+  return `【武庫川一文字 青物指数】\n${dt.getMonth()+1}/${dt.getDate()}(${WD[dt.getDay()]})の${nm}は指数${r.i}「${rank(r.i)[0]}」🎣\n▼明日以降の予想はこちら\n${SHARE_URL}\n\n${tags}`;
+}
+// URL・ハッシュタグの並びを崩さないよう、全部を本文（text）に入れて渡す
+function xIntent(text){
+  return 'https://x.com/intent/post?text='+encodeURIComponent(text);
+}
+function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();}
+// 1200×630 のシェア画像を描く（サイトのポップなデザインに合わせる）
+async function drawShare(r){
+  try{await document.fonts.ready;}catch(e){}
+  const W=1200,H=630,cv=document.createElement('canvas');cv.width=W;cv.height=H;
+  const c=cv.getContext('2d'),ink='#143246',sub='#55707F',acc=CFG[K].c,F='"M PLUS Rounded 1c","Yu Gothic",Meiryo,sans-serif';
+  c.fillStyle='#D9F1FA';c.fillRect(0,0,W,H);
+  // カード（オフセットの影＋太い枠線）
+  rr(c,54,54,1100,520,32);c.fillStyle=ink;c.fill();
+  rr(c,44,44,1100,520,32);c.fillStyle='#fff';c.fill();c.lineWidth=5;c.strokeStyle=ink;c.stroke();
+  // タイトルのラベル
+  rr(c,84,80,430,58,29);c.fillStyle='#FFC53D';c.fill();c.lineWidth=3;c.stroke();
+  c.fillStyle=ink;c.font=`800 28px ${F}`;c.textBaseline='middle';c.fillText('武庫川一文字 青物指数',112,110);
+  const dt=new Date(r.d),[rk,rsub]=rank(r.i),nm=CFG[K].name.split('（')[0];
+  // 日付・魚種
+  c.textBaseline='alphabetic';c.font=`800 64px ${F}`;c.fillStyle=ink;
+  const ds=`${dt.getMonth()+1}/${dt.getDate()}(${WD[dt.getDay()]})`;c.fillText(ds,84,226);
+  c.font=`800 40px ${F}`;c.fillStyle=acc;c.fillText(nm,84,288);
+  // 指数の評価
+  c.font=`800 92px ${F}`;c.fillStyle=ink;c.fillText(rk,84,400);
+  c.font=`700 30px ${F}`;c.fillStyle=sub;c.fillText(rsub,84,452);
+  // 潮回り・天気
+  const wx=(WX&&WX!=='fail')?WX[r.d]:null,wt=wx?((WMO[wx.code]||{t:''}).t+' '+wx.tmax+'°/'+wx.tmin+'°'):'';
+  c.font=`700 28px ${F}`;c.fillStyle=ink;c.fillText('潮回り：'+r.t+(wt?'　天気：'+wt:''),84,510);
+  // 指数のゲージ
+  const cx=920,cy=290,R=170;
+  c.lineWidth=30;c.lineCap='round';c.strokeStyle='#dfeef4';c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.stroke();
+  c.strokeStyle=acc;c.beginPath();c.arc(cx,cy,R,-Math.PI/2,-Math.PI/2+Math.PI*2*r.i/100);c.stroke();
+  c.textAlign='center';c.fillStyle=ink;c.font=`800 150px ${F}`;c.textBaseline='middle';c.fillText(String(r.i),cx,cy+8);
+  c.font=`700 26px ${F}`;c.fillStyle=sub;c.fillText('/ 100',cx,cy+100);
+  // サイト名・URL
+  c.textAlign='right';c.textBaseline='alphabetic';c.font=`800 26px ${F}`;c.fillStyle=ink;c.fillText('tsuri-boon.github.io/mukoindex.html',1116,540);
+  return cv;
+}
+// 画像付きで共有できるスマホかどうか
+// ※Windows の Chrome・Edge も画像付きの共有に対応しているため、スマホ（iPhone・iPad・Android）に限る
+const isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||(/Macintosh/.test(navigator.userAgent)&&navigator.maxTouchPoints>1);
+const canShareImage=isMobile&&(()=>{try{return !!(navigator.canShare&&navigator.canShare({files:[new File([''],'x.png',{type:'image/png'})]}));}catch(e){return false;}})();
+document.getElementById('xshare').onclick=async()=>{
+  const r=shareRow(),text=shareText(r);
+  // PCなど：押したらすぐ X の投稿画面（URL・ハッシュタグ入り）を開く
+  // ※画像を作るのを待つとポップアップがブロックされるので、待たずに開く
+  if(!r||!canShareImage){window.open(xIntent(text),'_blank','noopener');return;}
+  // スマホ：共有メニューから指数カードの画像付きで投稿（URLとハッシュタグは本文に入れる）
+  const cv=await drawShare(r);
+  const blob=await new Promise(res=>cv.toBlob(res,'image/png'));
+  const file=new File([blob],'mukoindex.png',{type:'image/png'});
+  try{await navigator.share({files:[file],text});}
+  catch(e){if(!(e&&e.name==='AbortError'))location.href=xIntent(text);}
+};
+document.getElementById('prev').onclick=()=>{if(cur>0){cur--;card();}};
+document.getElementById('next').onclick=()=>{const rows=D[K],base=si(rows);if(cur<6&&rows[base+cur+1]){cur++;card();}};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{K=b.dataset.k;render();});
+let x0=null;const dk=document.getElementById('deck');
+dk.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+dk.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40){dx<0?document.getElementById('next').click():document.getElementById('prev').click();}x0=null;});
+fetch('data/mukoindex.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
+  D=j;WEEKLY=j.weekly;
+  render();recent();loadWeather();
+});
+</script>
+</body>
+</html>

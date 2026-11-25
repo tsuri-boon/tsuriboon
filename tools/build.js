@@ -1,93 +1,80 @@
-// tsuriboon.com テスト用サイトを作る
+// tsuriboon.com の仮のサイトを作る（AdSense の審査用。審査が通ったらメインのリポジトリを tsuriboon.com に切り替える）
 //   node tools/build.js
-// - 元のサイト（../tsuriboon）から、Search Console で未登録の記事だけを article/ にコピーする。
-//   対象の一覧は tools/pages.txt（1行に1ファイル。例：article/xxx.html）。
-// - パスは元と同じ。canonical・og:url・構造化データの URL は https://tsuriboon.com/ にする。
-// - CSS・JS は元のサイト（https://tsuri-boon.github.io/）のものを読む（コピーしない）。
-// - 画像（ファビコン・ロゴ・記事の画像）は Google 検索のアイコン・サムネイル用に image/ にコピーして使う。
-// - コピーしていない記事・ページへのリンクは https://tsuri-boon.github.io/ のページへ向ける。
-// - 「新着記事」の枠は、元のサイトの JSON を読めないので外す。
-// - サイトマップ（sitemap.xml）はコピーした記事だけ。lastmod は元のサイトの sitemap.xml と同じ。
+// - 元のサイト（../tsuriboon）の公開ファイルを、すべて同じパスでコピーする（git で管理しているファイルだけ）。
+//   HTML・CSS・JS・画像・data/・sitemap.xml・sitemap.txt など。
+// - 文字のファイル（.html .xml .txt .json .js .css）の https://tsuri-boon.github.io/ は https://tsuriboon.com/ に置き換える。
+//   canonical・og:url・構造化データ・サイトマップも tsuriboon.com になる。
+// - ファビコンは favicon.ico・image/favicon-192.png・image/apple-touch-icon.png（このリポジトリに置いてあるもの）を使う。
+// - robots.txt・ads.txt はこのスクリプトが作る。CNAME はそのまま残す。
+// - 元のサイトから消えたファイルは、こちらからも消す。
+// 注意：GA4・AdSense のタグは元のサイトと同じ（どちらのドメインのアクセスも同じプロパティに入る）。
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const SRC = path.join(ROOT, '..', 'tsuriboon');
 const NEW = 'https://tsuriboon.com/';
 const OLD = 'https://tsuri-boon.github.io/';
 
-const pages = fs.readFileSync(path.join(__dirname, 'pages.txt'), 'utf8').split(/\r?\n/).map(s => s.trim()).filter(Boolean);
-const moved = new Set(pages.map(f => path.basename(f)));
+// コピーしないもの（元のサイトの作業用ファイル・テスト用ページ・IndexNow のキー）
+const SKIP = [/^tools\//, /^\.github\//, /^\.claude\//, /^CLAUDE\.md$/, /^README\.md$/, /^copyindex$/, /^sitemap-test\.xml$/,
+  /^testindnx\.html$/, /^top-test\.html$/, /^robots\.txt$/, /^[0-9a-f]{32}\.txt$/, /^\.gitignore$/, /^\.gitattributes$/];
+// このリポジトリにだけあるもの（消さない）
+const OWN = new Set(['CNAME', '.nojekyll', 'favicon.ico', 'image/favicon-192.png', 'image/apple-touch-icon.png', 'robots.txt', 'ads.txt']);
+const OWN_DIR = [/^tools\//, /^\.git\//, /^\.github\//];
 
-// 元のサイトの lastmod
-const lastmod = {};
-for (const m of fs.readFileSync(path.join(SRC, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) lastmod[m[1]] = m[2];
-
-// ファビコン（favicon.ico・image/favicon-192.png・image/apple-touch-icon.png はリポジトリに置いてある。
-// image/tsuriboon_favicon.png は元のサイトから毎回コピーする）
+const TEXT = /\.(html|xml|txt|json|js|css)$/i;
 const ICON_TAGS = [
   '<link rel="icon" href="/favicon.ico" sizes="48x48">',
   '<link rel="icon" href="/image/favicon-192.png" type="image/png" sizes="192x192">',
   '<link rel="apple-touch-icon" href="/image/apple-touch-icon.png">',
 ].join('\n  ');
-fs.mkdirSync(path.join(ROOT, 'image'), { recursive: true });
-// ページで使っている画像（convert の中で集める）。ファビコン類はリポジトリに置いたまま消さない
-const usedImages = new Set(['tsuriboon_favicon.png']);
-const KEEP_IMAGES = new Set(['favicon-192.png', 'apple-touch-icon.png', 'tsuriboon_logo7.png']); // logo7 はトップページ（index.html）用
 
-const convert = html => {
-  let s = html;
-  // 新着記事の枠を外す
-  s = s.replace(/[ \t]*<!-- 新着記事 start -->[\s\S]*?<!-- 新着記事 end -->\r?\n?/, '');
-  // コピーした記事の URL（canonical・og:url・構造化データ・本文の絶対リンク）
-  s = s.replace(/https:\/\/tsuri-boon\.github\.io\/article\/([\w.-]+\.html)/g, (all, f) => moved.has(f) ? NEW + 'article/' + f : all);
-  // ../ で始まる画像・CSS・JS・ページ
-  s = s.replace(/((?:src|href|content)=")\.\.\//g, '$1' + OLD);
-  // / で始まるリンク
-  s = s.replace(/((?:src|href)=")\/(?!\/)/g, '$1' + OLD);
-  // 同じフォルダの記事へのリンク
-  s = s.replace(/href="([\w.-]+\.html)([?#][^"]*)?"/g, (all, f, rest = '') => moved.has(f) ? all : `href="${OLD}article/${f}${rest}"`);
-  // ファビコン・ロゴは tsuriboon.com に置いたものを使う（Google 検索のサイトアイコン用）
-  s = s.replace(/<link rel="icon"[^>]*>/, ICON_TAGS);
-  // 画像は tsuriboon.com にコピーしたものを使う（Google 検索のサムネイル用。CSS・JS は元のサイトのまま）
-  s = s.replace(/https:\/\/tsuri-boon\.github\.io\/image\/([^"'\s()?#<>]+\.(?:jpe?g|png|webp|gif|svg))/gi, (all, p) => {
-    if (!fs.existsSync(path.join(SRC, 'image', p))) return all;
-    usedImages.add(p);
-    return NEW + 'image/' + p;
-  });
+const convert = (rel, s) => {
+  s = s.split(OLD).join(NEW);
+  if (/\.html$/i.test(rel)) s = s.replace(/<link rel="icon"[^>]*>/, ICON_TAGS);
   return s;
 };
 
-fs.rmSync(path.join(ROOT, 'article'), { recursive: true, force: true });
-fs.mkdirSync(path.join(ROOT, 'article'));
-const missing = [];
-for (const f of pages) {
-  const from = path.join(SRC, f);
-  if (!fs.existsSync(from)) { missing.push(f); continue; }
-  fs.writeFileSync(path.join(ROOT, f), convert(fs.readFileSync(from, 'utf8')));
-}
+// 元のサイトの公開ファイル（git で管理しているもの）
+const files = execSync('git -c core.quotepath=false ls-files', { cwd: SRC, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })
+  .split('\n').map(s => s.trim()).filter(Boolean).filter(f => !SKIP.some(re => re.test(f)));
+const want = new Set(files);
 
-// 画像をコピーする（使わなくなった画像は消す）
-let copied = 0, removed = 0;
-for (const p of usedImages) {
-  const from = path.join(SRC, 'image', p), to = path.join(ROOT, 'image', p);
+let copied = 0, same = 0;
+for (const rel of files) {
+  const from = path.join(SRC, rel), to = path.join(ROOT, rel);
+  if (!fs.existsSync(from)) continue; // 消したがコミット前のもの
   fs.mkdirSync(path.dirname(to), { recursive: true });
-  const st = fs.statSync(from);
-  if (!fs.existsSync(to) || fs.statSync(to).size !== st.size || fs.statSync(to).mtimeMs < st.mtimeMs) { fs.copyFileSync(from, to); copied++; }
+  let data;
+  if (TEXT.test(rel)) data = Buffer.from(convert(rel, fs.readFileSync(from, 'utf8')), 'utf8');
+  else data = fs.readFileSync(from);
+  if (fs.existsSync(to) && fs.readFileSync(to).equals(data)) { same++; continue; }
+  fs.writeFileSync(to, data);
+  copied++;
 }
-const walkImg = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walkImg(path.join(d, e.name)) : [path.join(d, e.name)]);
-for (const f of walkImg(path.join(ROOT, 'image'))) {
-  const rel = path.relative(path.join(ROOT, 'image'), f).split(path.sep).join('/');
-  if (!usedImages.has(rel) && !KEEP_IMAGES.has(rel)) { fs.rmSync(f); removed++; }
-}
-console.log(`画像 ${usedImages.size} 枚（コピー ${copied}・削除 ${removed}）`);
 
-// サイトマップ
-const urls = pages.filter(f => !missing.includes(f)).map(f => {
-  const lm = lastmod[OLD + f];
-  return `  <url>\n    <loc>${NEW}${f}</loc>\n${lm ? `    <lastmod>${lm}</lastmod>\n` : ''}  </url>`;
+// 元のサイトから消えたファイルを消す
+const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => {
+  const p = path.join(d, e.name);
+  return e.isDirectory() ? walk(p) : [p];
 });
-fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
+let removed = 0;
+for (const f of walk(ROOT)) {
+  const rel = path.relative(ROOT, f).split(path.sep).join('/');
+  if (OWN.has(rel) || OWN_DIR.some(re => re.test(rel + (rel.endsWith('/') ? '' : '')) || re.test(rel))) continue;
+  if (!want.has(rel)) { fs.rmSync(f); removed++; }
+}
+// 空になったフォルダを消す
+const prune = d => {
+  for (const e of fs.readdirSync(d, { withFileTypes: true })) if (e.isDirectory() && e.name !== '.git') prune(path.join(d, e.name));
+  if (d !== ROOT && fs.readdirSync(d).length === 0) fs.rmdirSync(d);
+};
+prune(ROOT);
 
-console.log(`コピー ${pages.length - missing.length} 件／サイトマップ ${urls.length} 件`);
-if (missing.length) console.log('元のサイトに無いファイル:', missing.join(' '));
+// robots.txt・ads.txt
+fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${NEW}sitemap.xml\n`);
+fs.writeFileSync(path.join(ROOT, 'ads.txt'), 'google.com, pub-9034047517729390, DIRECT, f08c47fec0942fa0\n');
+
+console.log(`元のサイトのファイル ${files.length} 件（書き込み ${copied}・変更なし ${same}・削除 ${removed}）`);
