@@ -4,6 +4,7 @@
 //   対象の一覧は tools/pages.txt（1行に1ファイル。例：article/xxx.html）。
 // - パスは元と同じ。canonical・og:url・構造化データの URL は https://tsuriboon.com/ にする。
 // - 画像・CSS・JS は元のサイト（https://tsuri-boon.github.io/）のものを読む（コピーしない）。
+//   ただしファビコン・ロゴ（Google 検索のサイトアイコン用）だけは tsuriboon.com に置いたものを使う。
 // - コピーしていない記事・ページへのリンクは https://tsuri-boon.github.io/ のページへ向ける。
 // - 「新着記事」の枠は、元のサイトの JSON を読めないので外す。
 // - サイトマップ（sitemap.xml）はコピーした記事だけ。lastmod は元のサイトの sitemap.xml と同じ。
@@ -22,6 +23,16 @@ const moved = new Set(pages.map(f => path.basename(f)));
 const lastmod = {};
 for (const m of fs.readFileSync(path.join(SRC, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) lastmod[m[1]] = m[2];
 
+// ファビコン（favicon.ico・image/favicon-192.png・image/apple-touch-icon.png はリポジトリに置いてある。
+// image/tsuriboon_favicon.png は元のサイトから毎回コピーする）
+const ICON_TAGS = [
+  '<link rel="icon" href="/favicon.ico" sizes="48x48">',
+  '<link rel="icon" href="/image/favicon-192.png" type="image/png" sizes="192x192">',
+  '<link rel="apple-touch-icon" href="/image/apple-touch-icon.png">',
+].join('\n  ');
+fs.mkdirSync(path.join(ROOT, 'image'), { recursive: true });
+fs.copyFileSync(path.join(SRC, 'image', 'tsuriboon_favicon.png'), path.join(ROOT, 'image', 'tsuriboon_favicon.png'));
+
 const convert = html => {
   let s = html;
   // 新着記事の枠を外す
@@ -34,6 +45,9 @@ const convert = html => {
   s = s.replace(/((?:src|href)=")\/(?!\/)/g, '$1' + OLD);
   // 同じフォルダの記事へのリンク
   s = s.replace(/href="([\w.-]+\.html)([?#][^"]*)?"/g, (all, f, rest = '') => moved.has(f) ? all : `href="${OLD}article/${f}${rest}"`);
+  // ファビコン・ロゴは tsuriboon.com に置いたものを使う（Google 検索のサイトアイコン用）
+  s = s.replace(/<link rel="icon"[^>]*>/, ICON_TAGS);
+  s = s.split(OLD + 'image/tsuriboon_favicon.png').join(NEW + 'image/tsuriboon_favicon.png');
   return s;
 };
 
